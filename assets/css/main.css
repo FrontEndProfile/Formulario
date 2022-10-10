@@ -18,6 +18,9 @@ body {
 * {
     font-family: var(--roboto);
 }
+a {
+    text-decoration: none;
+}
 
 .mobo {
     margin: auto;
@@ -92,7 +95,7 @@ body {
     color: #6B6B6B;
     margin-left: 6px;
 }
-.form_checks .form-check-label span {
+.form_checks .form-check-label span a {
     color: #2972FE;
 }
 .form_checks .form_check {
