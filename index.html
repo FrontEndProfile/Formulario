@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <section class="mobo">
+        <div class="form_layout">
+            <div class="form_layout_header">
+                <div class="form_header_tittle">Tienes <span>120</span> segundos para firmar</div>
+            </div>
+            <div class="form_layout_body pb-0">
+                <div class="form_layout_body_inner">
+                    <div class="form_logo"><img class="img-fluid change__img" src="assets/img/ars-logo.svg" alt=""></div>
+                    <div class="form_tittle">Solicitud de autenticación</div>
+                    <div class="form_row">
+                        <div class="form_row_small">Aflliado</div>
+                        <div class="form_row_text">Felipe Andrés Arenas Teneche</div>
+                    </div>
+                    <div class="form_row">
+                      <div class="form_row_small">Documento de identidad</div>
+                      <div class="form_row_text">026-6103111-1</div>
+                    </div>
+                    <div class="form_row">
+                      <div class="form_row_small">Médico</div>
+                      <div class="form_row_text">Maria Margarita Moreno De Jesus</div>
+                    </div>
+                    <div class="form_row last">
+                      <div class="form_row_small">Procedimiento</div>
+                      <div class="form_row_text green">Consulta Ambulatoria</div>
+                    </div>
+                    <div class="form_checks">
+                      <div class="form_check">
+                        <input class="form-check-input shadow-none"  type="checkbox" value="" id="changeinfo" onclick="myInfo()">
+                        <label class="form-check-label" for="changeinfo">
+                          Acepto los <span>Terminos y Condiciones</span>
+                        </label>
+                      </div>
+                      <div class="form_check mb-0">
+                        <input class="form-check-input shadow-none"  type="checkbox" id="myCheck1" onclick="myFunction()">
+                        <label class="form-check-label" for="myCheck1">
+                          Leí y acepto la <span>Declaración de privacidad</span>
+                        </label>
+                      </div>
+                    </div>
+
+
+                    <div class="form_btns">
+                      <div>
+                        <button class="form_btn_next noactive" disabled  type="button" id="nextBtn" onclick="loader()">Autenticarme</button>
+                        <button class="form_btn_rechazar"  type="button" >Rechazar</button>
+                      </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="form_logo_end"><img class="img-fluid" src="assets/img/vamoid.svg" alt=""></div>
+        </div>
+        <!-- === -->
+        
+        <script>
+        function myFunction() {
+          var checkBox = document.getElementById("myCheck1");
+          if (checkBox.checked == true){
+            document.querySelector(".form_btn_next" ).className = "form_btn_next active";
+            document.querySelector(".form_btn_next.active").disabled = false;
+            
+          } else {
+            document.querySelector(".form_btn_next").className = "form_btn_next noactive";
+            document.querySelector(".form_btn_next.noactive").disabled = true;
+          }
+        }
+        function myInfo() {
+          var checkBox = document.getElementById("changeinfo");
+          if (checkBox.checked){
+            document.querySelector(".img-fluid.change__img").src='assets/img/humano.svg';
+            document.querySelector(".form_row_small").innerHTML = "Nombre y apellido";
+          } else {
+            document.querySelector(".img-fluid.change__img").src='assets/img/ars-logo.svg';
+            document.querySelector(".form_row_small").innerHTML = "Solicitud de autenticación";
+          }
+        }
+        function loader() {
+          document.querySelector(".full_loader").style.display = "block" ;
+          
+        }
+        </script>
+    </section>
+    <div class="full_loader mx-auto">
+      <div class="full_loader_logo text-center"><img class="img-fluid" src="assets/img/loaded.svg" alt=""></div>
+      <div class="full_loader_text">
+        ¡Procedimiento<br>autorizado!
+      </div>
+      <div class="full_loader_logo_two text-center mx-auto"><img class="img-fluid w-100" src="assets/img/vamoid.svg" alt=""></div>
+
+    </div>
+
+
+
+    
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

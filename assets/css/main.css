@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --roboto:'Roboto', sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--roboto);
+}
+body {
+    background: #E5E5E5;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; */
+}
+* {
+    font-family: var(--roboto);
+}
+
+.mobo {
+    margin: auto;
+    /* max-width: 390px; */
+    width: 100%;
+    background: #F7F7F7;
+    min-height: 100vh;
+}
+.form_layout_header {
+    width: 100%;
+    background: #00BBEC;
+    padding: 14px 40px 13px;
+}
+.form_header_tittle {
+    font-family: var(--roboto);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.form_header_tittle span {
+    font-family: var(--roboto);
+    font-weight: 600;
+}
+.form_layout_body {
+    padding: 24px;
+    max-width: 390px;
+    margin: auto;
+}
+.form_layout_body_inner {
+    padding: 30px 24px;
+}
+.form_logo {
+    margin-bottom: 30px;
+}
+.form_layout .form_tittle {
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #233B8E;
+}
+.form_row {
+    margin-bottom: 15px;
+}
+.form_row_small {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.form_row_text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+.form_row_text.green {
+    color: #008562;
+}
+.form_row.last {
+    margin-bottom: 30px;
+}
+.form_checks {
+    margin-bottom: 20px;
+}
+.form_checks .form-check-label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6B6B6B;
+    margin-left: 6px;
+}
+.form_checks .form-check-label span {
+    color: #2972FE;
+}
+.form_checks .form_check {
+    margin-bottom: 12px;
+}
+
+/* Hide all steps by default: */
+.tab {
+display: none;
+
+}
+.form_layout_body_inner {
+    background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.form_btns {
+
+}
+.step.active {
+    opacity: 1;
+}
+#prevBtn,#nextBtn {
+    background: #C7C7C7;
+    border-radius: 200px;
+    padding: 14px 0 13px;
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+}
+.form_btn_prev {
+    display: none;
+}
+.form_btn_rechazar {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    border: none;
+    box-shadow: none;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 100%;
+    background: none;
+}
+.form_btn_next.active {
+    background: #008562 !important;
+}
+.form_logo_end {
+    margin-top: 33px;
+    text-align: center;
+}
+
+
+.full_loader {
+    background: #F7F7F7;
+    position: fixed;
+    /* position: absolute; */
+    /* max-width: 390px; */
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    inset: 0;
+    padding-top: 7vh;
+    display: none;
+}
+.full_loader_text {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 41px;
+    text-align: center;
+    color: #008562;
+    margin-top: 12px;
+}
+.full_loader_logo_two {
+    margin-top:40vh;
+    width: 160px;
+}
+
+@media (max-width:380px) {
+    .form_layout_header {
+        padding: 14px 15px 13px;
+    }
+    .form_layout_body {
+        padding: 12px;
+    }
+    .form_layout_body_inner {
+        padding: 25px 15px;
+    }
+    .form_checks .form-check-label {
+        font-size: 13px;
+        line-height: 14px;
+        margin-left: 3px;
+    }
+    .form_layout .form_tittle {
+        margin-bottom: 22px;
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .form_logo {
+        margin-bottom: 26px;
+    }
+    .form_row {
+        margin-bottom: 12px;
+    }
+    .form_row_text {
+        font-size: 16px;
+    }
+    .form_row_small {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    #prevBtn, #nextBtn {
+        padding: 11px 0 12px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .form_btn_rechazar {
+        font-size: 16px;
+        line-height: 21px;
+        margin-top: 15px;
+    }
+}
