@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Formulario</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
@@ -61,33 +61,7 @@
         </div>
         <!-- === -->
         
-        <script>
-        function myFunction() {
-          var checkBox = document.getElementById("myCheck1");
-          if (checkBox.checked == true){
-            document.querySelector(".form_btn_next" ).className = "form_btn_next active";
-            document.querySelector(".form_btn_next.active").disabled = false;
-            
-          } else {
-            document.querySelector(".form_btn_next").className = "form_btn_next noactive";
-            document.querySelector(".form_btn_next.noactive").disabled = true;
-          }
-        }
-        function myInfo() {
-          var checkBox = document.getElementById("changeinfo");
-          if (checkBox.checked){
-            document.querySelector(".img-fluid.change__img").src='assets/img/humano.svg';
-            document.querySelector(".form_row_small").innerHTML = "Nombre y apellido";
-          } else {
-            document.querySelector(".img-fluid.change__img").src='assets/img/ars-logo.svg';
-            document.querySelector(".form_row_small").innerHTML = "Solicitud de autenticación";
-          }
-        }
-        function loader() {
-          document.querySelector(".full_loader").style.display = "block" ;
-          
-        }
-        </script>
+
     </section>
     <div class="full_loader mx-auto">
       <div class="full_loader_logo text-center"><img class="img-fluid" src="assets/img/loaded.svg" alt=""></div>
@@ -97,9 +71,6 @@
       <div class="full_loader_logo_two text-center mx-auto"><img class="img-fluid w-100" src="assets/img/vamoid.svg" alt=""></div>
 
     </div>
-
-
-
     
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
