@@ -2,11 +2,14 @@ function myFunction() {
   var checkBox = document.getElementById("myCheck1");
   if (checkBox.checked == true){
     document.querySelector(".form_btn_next" ).className = "form_btn_next active";
-    document.querySelector(".form_btn_next.active").disabled = false;
+    // document.querySelector(".form_btn_next.active").disabled = false;
+    // document.querySelector(".form_btn_next.active").disabled = false;
+    document.querySelector(".form_btn_next.active").style.pointerEvents = "visible"
+
     
   } else {
     document.querySelector(".form_btn_next").className = "form_btn_next noactive";
-    document.querySelector(".form_btn_next.noactive").disabled = true;
+    document.querySelector(".form_btn_next.noactive").style.pointerEvents = "none"
   }
 }
 // === 
@@ -21,7 +24,9 @@ function myInfo() {
   }
 }
 // === 
-function loader() {
-  document.querySelector(".full_loader").style.display = "block" ;
-  
+var preloader = document.getElementById('load_icon');
+function load__() {
+  setTimeout(function() {
+    preloader.style.display = 'none';
+  }, 1500)
 }

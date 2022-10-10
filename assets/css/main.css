@@ -10,10 +10,6 @@ body {
 }
 body {
     background: #E5E5E5;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; */
 }
 * {
     font-family: var(--roboto);
@@ -24,7 +20,6 @@ a {
 
 .mobo {
     margin: auto;
-    /* max-width: 390px; */
     width: 100%;
     background: #F7F7F7;
     min-height: 100vh;
@@ -102,7 +97,6 @@ a {
     margin-bottom: 12px;
 }
 
-/* Hide all steps by default: */
 .tab {
 display: none;
 
@@ -111,7 +105,6 @@ display: none;
     background: #FFFFFF;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-/* Make circles that indicate the steps of the form: */
 .step {
     height: 15px;
     width: 15px;
@@ -123,9 +116,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     opacity: 0.5;
 }
 
-.form_btns {
-
-}
 .step.active {
     opacity: 1;
 }
@@ -169,15 +159,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .full_loader {
     background: #F7F7F7;
-    position: fixed;
-    /* position: absolute; */
-    /* max-width: 390px; */
     width: 100%;
     height: 100vh;
-    z-index: 99;
     inset: 0;
     padding-top: 7vh;
-    display: none;
 }
 .full_loader_text {
     font-weight: 500;
@@ -191,7 +176,29 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top:40vh;
     width: 160px;
 }
+.form_btn_next.noactive {
+    pointer-events: none;
+}
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    overflow: hidden;
+    font-size: 33px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    background-image: url(../img/spinner.gif);
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: multiply;
 
+}
 @media (max-width:380px) {
     .form_layout_header {
         padding: 14px 15px 13px;
