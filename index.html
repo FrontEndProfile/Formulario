@@ -10,7 +10,7 @@
   <body>
     <section class="mobo">
         <div class="form_layout">
-            <div class="form_layout_header">
+            <div class="form_layout_header shadow-sm position-fixed top-0">
                 <div class="form_header_tittle">Tienes <span>120</span> segundos para firmar</div>
             </div>
             <div class="form_layout_body">
@@ -29,10 +29,33 @@
                       <div class="form_row_small">Médico</div>
                       <div class="form_row_text">Maria Margarita Moreno De Jesus</div>
                     </div>
-                    <div class="form_row last">
+                    <div class="form_row">
                       <div class="form_row_small">Procedimiento</div>
                       <div class="form_row_text green">Consulta Ambulatoria</div>
                     </div>
+                    <form class="form_row last">
+                      <div class="mb-2">
+                        <label for="exampleInputtext1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleInputtext1">
+                      </div>
+                      <div class="mb-2">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-2">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <div class="mb-2">
+                        <label for="exampleInputEmail1" class="form-label">Address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-2">
+                        <label for="exampleInputEmail1" class="form-label">Location</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      </div>
+                      
+                    </form>
                     <div class="form_checks">
                       <div class="form_check">
                         <input class="form-check-input shadow-none"  type="checkbox" value="" id="changeinfo" onclick="myInfo()">
@@ -51,16 +74,28 @@
 
                     <div class="form_btns">
                       <div>
-                        <a  class="form_btn_next noactive" href="loader.html"  type="button" id="nextBtn" onclick="loader()">Autenticarme</a>
-                        <button class="form_btn_rechazar"  type="button" >Rechazar</button>
+                        <button  class="form_btn_next noactive" type="button" id="nextBtn" onclick="loader()">Autenticarme</button>
+                        <button class="form_btn_rechazar"  type="button" onclick="loader_gif()" >Rechazar</button>
                       </div>
                     </div>
                 </div>    
             </div>
             <div class="form_logo_end"><img class="img-fluid" src="assets/img/vamoid.svg" alt=""></div>
         </div>
-        <!-- === -->
     </section>
+    <div id="hideDiv">
+      <div class="load_gif">
+        <div class="loading"></div>
+      </div>
+    </div>
+    <div class="full_loader mx-auto">
+      <div class="full_loader_logo text-center"><img class="img-fluid" src="assets/img/loaded.svg" alt=""></div>
+      <div class="full_loader_text">
+        ¡Procedimiento<br>autorizado!
+      </div>
+      <div class="full_loader_logo_two text-center mx-auto"><img class="img-fluid w-100" src="assets/img/vamoid.svg" alt=""></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>

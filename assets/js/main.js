@@ -2,11 +2,10 @@ function myFunction() {
   var checkBox = document.getElementById("myCheck1");
   if (checkBox.checked == true){
     document.querySelector(".form_btn_next" ).className = "form_btn_next active";
-    // document.querySelector(".form_btn_next.active").disabled = false;
-    // document.querySelector(".form_btn_next.active").disabled = false;
     document.querySelector(".form_btn_next.active").style.pointerEvents = "visible"
-
-    
+    $(function() {
+      setTimeout(function() { $("#hideDiv").fadeOut(1000); }, 1000)
+      })
   } else {
     document.querySelector(".form_btn_next").className = "form_btn_next noactive";
     document.querySelector(".form_btn_next.noactive").style.pointerEvents = "none"
@@ -24,9 +23,10 @@ function myInfo() {
   }
 }
 // === 
-var preloader = document.getElementById('load_icon');
-function load__() {
-  setTimeout(function() {
-    preloader.style.display = 'none';
-  }, 1500)
+function loader() {
+  document.querySelector(".full_loader").style.display = "block" ;
+}
+// === 
+function loader_gif() {
+  document.querySelector("#hideDiv").style.display = "block" ;
 }
